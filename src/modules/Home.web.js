@@ -82,8 +82,6 @@ const ContentComponent = () => {
 }
 
 const Home = () => {
-
-
     return (
         <View style={styles.container}>
             <ContentComponent />
