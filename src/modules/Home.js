@@ -103,7 +103,7 @@ const Home = () => {
                 <EmojiPicker isVisible={isModalVisible} onClose={onModalClose}>
                     <EmojiList onSelect={setPickedEmoji} onCloseModal={onModalClose} />
                 </EmojiPicker>
-                <StatusBar style="auto" />
+                <StatusBar style="light"/>
             </View>
         </SafeAreaView>
     );
@@ -112,6 +112,7 @@ const Home = () => {
 const styles = StyleSheet.create({
     areaView: {
         flex: 1,
+        backgroundColor: '#25292e',
     },
     container: {
         flex: 1,
