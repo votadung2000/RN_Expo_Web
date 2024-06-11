@@ -18,7 +18,7 @@ import EmojiList from './EmojiList'
 
 const PlaceholderImage = require('../../assets/images/background-image.png');
 
-const ContentComponent = () => {
+const ContentComponent = ({ other }) => {
     const imageRef = useRef();
 
     const [selectedImage, setSelectedImage] = useState(null);
@@ -88,7 +88,7 @@ const ContentComponent = () => {
     };
 
     return (
-        <View style={styles.content}>
+        <View style={[styles.content, other && styles.otherContent]}>
             <View style={styles.imageContainer}>
                 <View ref={imageRef} collapsable={false}>
                     <ImageViewer
@@ -130,7 +130,7 @@ const Home = () => {
     return (
         <View style={styles.container}>
             <ContentComponent />
-            <ContentComponent />
+            <ContentComponent other />
         </View>
     );
 }
@@ -148,6 +148,9 @@ const styles = StyleSheet.create({
         height: '100%',
         alignItems: 'center',
         justifyContent: 'center',
+    },
+    otherContent: {
+        backgroundColor: '#b3b3b3',
     },
     imageContainer: {
         flex: 1,
