@@ -40,6 +40,8 @@ const ContentComponent = () => {
     };
 
     const onReset = () => {
+        setSelectedImage(null);
+        setPickedEmoji(null);
         setShowAppOptions(false);
     };
 
